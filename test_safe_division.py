@@ -56,10 +56,10 @@ class TestSafeDivision(unittest.TestCase):
     def test_fractional_results(self):
         """Test division that results in fractions."""
         result = safe_division(1, 3)
-        self.assertAlmostEqual(result, 0.333333, places=5)
+        self.assertAlmostEqual(result, 1/3, places=7)
         
         result = safe_division(7, 3)
-        self.assertAlmostEqual(result, 2.333333, places=5)
+        self.assertAlmostEqual(result, 7/3, places=7)
     
     def test_very_small_divisor(self):
         """Test division with very small divisor (but not zero)."""
